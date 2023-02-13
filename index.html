@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+	  #song-title {
+  color: #333;
+  font-size: 36px;
+  text-align: center;
+}
+
+#song-artist {
+  color: #555;
+  font-size: 24px;
+  text-align: center;
+}
+
+	  </style>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+	<div class="container">
+	  <div class="row">
+		<div class="col-sm-12">
+		  <h2 id="song-title"></h2>
+		  <p id="song-artist"></p>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-sm-12">
+		  <audio controls>
+			<source src="https://server10.mp3quran.net/Aamer/001.mp3" type="audio/mpeg">
+			  Your browser does not support the audio element.
+		  </audio>
+		</div>
+	  </div>
+	</div>
+	
+	
+    <h1>My Website</h1>
+
+    <p>This is my first website</p>
+
+  </body>
+  
+  <script>
+	
+	var audio = document.querySelector('audio');
+var playBtn = document.querySelector('#play-btn');
+
+playBtn.addEventListener('click', function() {
+  if (audio.paused) {
+    audio.play();
+    playBtn.innerHTML = "Pause";
+  } else {
+    audio.pause();
+    playBtn.innerHTML = "Play";
+  }
+});
+
+	</script>
+</html>		
